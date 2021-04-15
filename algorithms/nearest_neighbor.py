@@ -37,7 +37,3 @@ if __name__ == '__main__':
           [2, 2, 7, 0, np.inf]]
 
     print(nearest_neighbor(m, 5))
-
-
-
-
