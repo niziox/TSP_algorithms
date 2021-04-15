@@ -30,13 +30,13 @@ def nearest_neighbor(adj_matrix: List[List[int]], start=1) -> Tuple[List[int], i
 
 
 if __name__ == '__main__':
-    m1 = [[np.inf, 5, 4, 6, 6],
+    m = [[np.inf, 5, 4, 6, 6],
           [8, np.inf, 5, 3, 4],
           [4, 3, np.inf, 3, 1],
           [8, 2, 5, np.inf, 6],
           [2, 2, 7, 0, np.inf]]
 
-    print(nearest_neighbor(m1))
+    print(nearest_neighbor(m, 5))
 
 
 

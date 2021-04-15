@@ -10,6 +10,7 @@ def k_opt_2(adj_matrix: List[List[int]], start=1) -> Tuple[List[int], int]:
 
 
     while has_distance_changed:
+        pass
         
 
 
