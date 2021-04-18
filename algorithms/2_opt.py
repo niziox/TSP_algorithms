@@ -16,10 +16,10 @@ def calculate_total_distance(existing_route: List[int], adj_matrix: List[List[in
     return total_distance
 
 
-def opt_2(adj_matrix: List[List[int]], start=1, genetic_algorithm: str = 'non-decreasing') -> Tuple[List[int], int]:
+def opt_2(adj_matrix: List[List[int]], start=1, genetic_algorithm: str = 'increasing') -> Tuple[List[int], int]:
     has_distance_changed = True
 
-    if genetic_algorithm == 'non-decreasing':
+    if genetic_algorithm == 'increasing':
         existing_route = [start] + [vertex for vertex in range(1, len(adj_matrix) + 1) if vertex != start] + [start]
         best_distance = calculate_total_distance(existing_route, adj_matrix)
     elif genetic_algorithm == 'nearest_neighbor':
@@ -29,7 +29,7 @@ def opt_2(adj_matrix: List[List[int]], start=1, genetic_algorithm: str = 'non-de
     elif genetic_algorithm == 'nearin':
         existing_route, best_distance = nearin(adj_matrix, start)
     else:
-        raise ValueError('Wrong argument, choose from: non-decreasing, nearest_neighbor, farin, nearin')
+        raise ValueError('Wrong argument, choose from: increasing, nearest_neighbor, farin, nearin')
 
     while has_distance_changed:
         has_distance_changed = False
